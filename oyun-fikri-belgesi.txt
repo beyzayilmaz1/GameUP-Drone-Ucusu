@@ -1,0 +1,90 @@
+Oyun Fikrim
+GAMEUP  |  DOLDURULACAK BELGE
+Oyun fikri bölümünü doldurup belgenin tamamını Claude Code’da Opus 5.5 High’a ver. Ek başlangıç mesajı gerekmez. Claude net olmayan noktaları önce sorsun; yanıtlar netleşince ChatGPT Görsel Oluştur promptlarını versin. Ürettiğin görselleri aynı oturuma geri yükle. Asıl uygulaman eğitimlerin ardından yapılır.
+
+1  Oyunun adı
+Süzgeç Koyu
+İsim seçildi. Başka ad aranmayacak.
+
+2  Oyuncu kim ve amacı ne
+Oyuncu, suyun içinde yandan görünen küçük bir temizlik drone’udur. Borudan yayılan plastik üç midye halkasının üstünü kapatmıştır; oyuncu önce plastiği kaldırır, sonra aynı halkaya midye ipi kurar. Midye ipleri kurulunca suyu kendileri süzer. Amaç, koyun kendi süzgecini yeniden çalıştırmaktır. Yalnızca çöp toplamak suyu kalıcı olarak temizlemez.
+
+3  Oyuncu neler yapabilsin
+Manuel eylemler, otomatiğe çevrilmeyecek:
+- WASD ve ok tuşları: drone’u su kesitinin içinde sağa, sola, yukarı ve aşağı yüzdürür. İkisi aynı eylemdir. Drone gökyüzüne çıkamaz; su çizgisinin altında ve kumun üstünde kalır.
+- SPACE: drone bir plastik yığınının üstündeyken o plastiği kaldırır. Halka boşsa, halka zaten temizse veya drone yığının üzerinde değilse eylem başarısız olur; puan artmaz, plastik sayısı değişmez.
+- G: plastik kalkmış boş bir midye halkasının üstündeyken midye ipi kurar. Plastik duruyorsa, halka yoksa veya ip zaten kurulduysa eylem başarısız olur; ikinci ip kurulmaz, puan artmaz.
+- M ve sağ üstteki hoparlör düğmesi: sesi açar veya kapatır.
+- Hoparlör kartındaki kısa düzey çubuğu: ana ses düzeyini değiştirir. Oyun %70 düzeyle başlar.
+- R ve bitiş kartındaki Yeniden başlat düğmesi: koyu başlangıç durumuna alır.
+
+Otomatik olanlar:
+- Geri sayım.
+- Borunun su değerini düşürmesi.
+- Kurulmuş her midye ipinin su değerini yükseltmesi.
+- Puan, hedef sayaçları, su çubuğu ve kazanma/kaybetme kontrolü.
+- Pervane dönüşü, suyun renk değişimi, boru sızıntısı ve midye ipinin hafif salınımı.
+
+Sayılar:
+- Üç plastik yığını, üç midye halkası. Her yığın bir halkanın üstünde başlar.
+- Su 70/100 ile başlar, 0 ile 100 arasında kalır.
+- Boru saniyede 2 puan düşürür. Her kurulan midye ipi bu düşüşü 0,7 azaltır. Üç ip kurulunca boru durur.
+- Her kurulan ip ayrıca saniyede 1,5 puan su ekler.
+- Plastik kaldırmak 100 puan, midye ipi kurmak 150 puan verir. Aynı hedef tekrarlanarak puan çoğaltılamaz.
+
+4  Hedef ve oyun sonucu
+Kazanma: üç plastik de kalkmış, üç midye ipi de kurulmuş ve su 0’ın üzerindeyse oyun hemen biter. Kalan süre beklenmez.
+Kaybetme: su 0’a düşerse veya süre bitip iki hedeften biri eksikse oyun biter.
+Berabere yok.
+Yeniden başlama: R veya bitiş kartındaki düğme sayacı, suyu, puanı, plastikleri, ipleri ve drone konumunu açılış haline getirir. Çalan sesler kesilir ve üst üste binmez.
+Kararsız nokta yok.
+
+5  Dünya ve görsel tarz
+Tek ekranlık koy, yandan deniz kesiti. Görsel hedef, Hungry Shark World posterindeki okunuştur: üstte parlak gökyüzü ve bulutlar, net bir su çizgisi, suyun hemen altında canlı camgöbeği, derine inildikçe doygun mavi, dipte koyu lacivert ve kumluk. Biçimler tombul, yuvarlak, parlak ve çizgi film gibi; büyük siluetler, yumuşak gölge, doygun renk. Düz pastel tahta, tepeden ada dioraması, çimen, yangın ve fidan yok. Hungry Shark adı, logosu ve o oyundaki köpekbalıkları kopyalanmayacak. Video oynatıcının düğmeleri de oyunun parçası değil.
+Ekranın üst üçte biri gökyüzü, ufukta alçak bir kıyı silueti. Su çizgisinin solunda kıyıya bağlı beton boru; borudan aşağı doğru zeytin yeşili bulanık bulut sızar. Kumlukta üç beyaz kesik halka farklı derinliklerde durur. Açılışta her halkanın önünde, yandan görünen bir plastik yığını vardır. Drone suyun ortasında, yana bakacak şekilde yüzer: beyaz tombul gövde, büyük cam kamera, dört küçük pervane. Midye ipi, halkaya gerilmiş koyu halat ve üstünde iri kabuklardır. Arkada birkaç küçük renkli balık yalnız süs içindir; toplanmaz, puana yazılmaz. Su düşünce kesit yeşile döner, yükseldikçe posterdeki gibi berrak camgöbeği ve mavi olur.
+Hissiyat: hareketli, parlak, ticari bir mobil oyun kapağı kadar okunaklı. Korku, gerçekçi yara veya canavar ağzı yok.
+Arayüz denizin üstüne biner, sahneyi küçük bir adaya sıkıştırmaz:
+- Sol üst beyaz kart: sarı yıldız, PUAN, büyük sayı.
+- Onun altında beyaz kart: mavi damla, SU, doluluk çubuğu, 70/100 gibi değer.
+- Üst orta hap: saat simgesi, SÜRE, 02:00’dan geri sayım.
+- Sağ üst yuvarlak hoparlör düğmesi ve hemen altında kısa ses düzeyi çubuğu.
+- Sağda beyaz HEDEFLER kartı: turuncu plastik simgesiyle “Plastik kaldır 0/3”, teal midye simgesiyle “Midye ipi kur 0/3”.
+- Altta yarı saydam tuş şeridi: WASD Hareket · SPACE Plastiği kaldır · G Midye ipi kur · M Ses · R Yeniden.
+Açılış anı tek tutarlı görüntü olsun: puan 0, su 70/100, süre 02:00, iki hedef de 0/3, üç plastik yerinde, boru sızıyor, drone suyun ortasında yandan görünür. Yazılar Türkçe.
+
+6  Görünüm ve oynanacak cihaz
+2D yan bakış. Sabit kamera; gökyüzünden kumluğa bütün koy tek karede görünsün. Su çizgisi ekranın yaklaşık üst üçte birinde kalsın. Karakterler parlak çizgi film hacmi taşısın ama sahne Godot 2D düğümleriyle kurulsun. Hazır 3D model yok, serbest kamera yok, tüm ekran tek fotoğraf olmasın.
+Masaüstü klavye. Çözünürlük 1280×720. Tıklama yalnız hoparlör, ses çubuğu ve bitişteki yeniden başlat düğmesi içindir.
+
+7  Mutlaka olsun veya olmasın
+Olsun:
+- Bu belgedeki tuşlar, iki manuel eylem ve otomatik süzme.
+- Başarısız SPACE veya G eyleminde başarı sesi çalmasın; kısa, alçak bir hata tıkı çalsın.
+- Sesler araçla sentezlensin veya kodla üretilecek kısa dosyalar olsun. Kullanıcıdan ses indirmesi istenmesin.
+- Sesler: harekette hafif pervane, durunca pervane kesilsin; plastik kalkınca kısa su sıçraması; midye kurulunca yumuşak bir çan; hatalı eylemde ayrı bir tık; su 25’in altındayken alçak bir uyarı, tiz siren olmasın; kazanmada kısa yükselen ton; kaybetmede kısa pes ton; arayüz tıklamasında çok küçük bir tık. Rahatsız edici veya bozuk ses kabul edilmez.
+- Açılışta düzey %70. Hoparlör sesi kapatıp açar. Yeniden başlatınca eski sesler birikmez.
+- Su rengi, kirlilik değerine bağlı değişir. Temiz su, posterdeki gibi yüzeye yakın camgöbeği ve derinde mavi olsun.
+- Kapsam tek koy, tek ekran. Yeni seviye, mağaza, hikâye sahnesi veya üçüncü araç eklenmesin.
+- Yandan deniz kesiti, parlak tombul çizgi film biçimleri ve net su çizgisi.
+
+Olmasın:
+- Silah, patlama, korku, canavar, ısıran köpekbalığı.
+- Hungry Shark adı, logosu veya o oyunun karakterleri.
+- Ders örneğindeki yangın söndürme, fidan dikme ve tepeden çimen dioraması.
+- Çöpleri kendiliğinden toplayan veya midye ipini kendiliğinden kuran bir sistem.
+- Orman, çimen zemin veya yangın.
+
+Claude için çalışma talimatı
+Bu bölümü değiştirme. Claude belgeyle birlikte okuyup uygular.
+Önce belirsizlikleri sor
+Belgeyi oku; ek başlangıç mesajı bekleme. Oyun fikri, manuel/otomatik eylemler, tuşlar, bitiş koşulları veya görsel hedefte eksik ya da çelişen önemli karar varsa önce kısa sorular sor ve yanıtımı bekle. Bu noktalar netleşmeden görsel promptu veya kod üretme. “Buraya yaz” alanını cevap sayma. Açıkça “Claude seçsin/planlasın” dediğim tercihleri sen belirle; rutin teknik kararları bana yükleme. Kurulum yolu gibi üretim ayrıntılarını görseller geri geldiğinde ele al. Belirttiğim tuşları veya manuel eylemleri kendi kendine otomatiğe çevirme.
+Ardından iki ChatGPT görsel promptu ver
+Kararlar netse ilk üretimin iki ayrı kopyalanabilir prompt olsun: önce oyunun arayüzsüz konsepti, sonra aynı sahnenin arayüzlü hâli. Belgedeki stil, kamera, renk, nesne oranı, düzen ve platformu somut tarif et; uygulanabilir Godot kapsamını koru. İkinci prompt ilk resmi referans alsın; sahneyi yeniden tasarlamasın. Göstergeler ve sahnedeki nesneler tek bir tutarlı oyun anını anlatsın. Arayüzde kararlaştırdığımız tuşlar görünsün. Tasarım referansı istediğini belirt; çalışan oyun görüntüsü diye sunma.
+Referans görselleri geri iste
+Promptlardan sonra “Bunları ChatGPT Görsel Oluştur’da sırayla kullan. Seçtiğin konsept ve arayüz görsellerini bu Claude Code oturumuna ekle veya proje klasörüne kaydedip yollarını paylaş” de. Görseller gelmeden kodlamaya başlama. Ek bir başlangıç promptu hazırlamamı isteme.
+Referansı sadakatle uygula
+Görselleri yalnız esin kaynağı değil somut tasarım hedefi kabul et; genel benzerlikle yetinme. Kamera açısı ve yakınlığı, sahne yerleşimi, nesne siluetleri/oranları, renkler, ışık, gölgeler ve arayüzün konum, boyut, tipografi ve boşluklarını tek tek eşleştir. Godot’da işlevsel sahne ve arayüz oluştur; oyun alanını tek resimle taklit etme. 3D görseli hazır model sayma. Aynı kamera ve çözünürlükte gerçek oyun görüntüsü alıp referansla karşılaştır; büyük farkları düzelt ve yeniden kontrol et. Referansla belge çelişirse sor. Bir ayrıntıyı uygulayamıyorsan sessizce sadeleştirme; farkı ve çözüm seçeneklerini önce açıkla. Görsel doğrulama yapamıyorsan bunu söyle, benden gerekli görüntüyü iste.
+Sesleri kendin üret ve oyuna bağla
+Ses zorunludur; sessiz sürümü tamamlandı sayma. Oyuna uygun kısa efektleri ve gerekiyorsa döngü sesini kodla sentezleyip ses dosyası olarak veya Godot içinde üret. Kullanıcıdan ses bulmasını isteme. Her sesi doğru olayla eşleştir; başarısız eylemde başarı sesi çalmasın. Ses düzeyi ile aç/kapat kontrolü ekle. Yeniden başlatmada sesler üst üste birikmesin; sesler rahatsız edici veya bozuk çıkmasın. Gerçek oynatmayı kontrol et; dinleyemediğin sonucu doğrulandı sayma ve gerekli dinleme kontrolünü bana söyle.
+Oyunu tamamla ve doğrula
+Godot sürümünü kontrol et; kuralları, sahneleri, görselleri, animasyonları ve sesleri sen planlayıp seçili proje klasöründe uygula. Opus 5.5 High ile tamamlanabilir kapsamda kal; yeni özellikler ekleyerek işi büyütme. Her adım için yeni prompt bekleme. Belirtilmeyen önemli davranışları sor; çözüm ayrıntılarını sen seç. Tuş eşlemelerini, kaynak sınırlarını, tekrar eylemi, bitişi ve yeniden başlamayı test et. Dosya erişimin yoksa aynı belge ve görsellerle Claude Code’a geçişi kısaca anlat. Gerekli kullanıcı işlemini açıkça belirt; yapmadığın testi başarılı sayma. Sonunda projeyi, çalıştırma yolunu, referanstan kalan farkları ve eksikleri ver.

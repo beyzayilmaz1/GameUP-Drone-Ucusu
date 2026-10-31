@@ -1,0 +1,13 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1793479005
+icon.svg::CompressedTexture2D::4535465297435839192::1793478886::1793479010::1::::<><><>0<>0<>f582463e27d6b67cfa98b108b507f24f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+odev-aciklama.txt::TextFile::-1::1793478910::0::1::::<><><>0<>0<><>::
+::res://scenes/::1793478909
+atik.tscn::PackedScene::146837362662702404::1793478900::0::1::::<><><>0<>0<><>::res://scripts/atik.gd
+drone.tscn::PackedScene::146837362796574582::1793478900::0::1::::<><><>0<>0<><>::res://scripts/drone.gd
+main.tscn::PackedScene::146837363182540576::1793478977::0::1::::<><><>0<>0<><>::res://scripts/oyun.gd<>res://scripts/deniz.gd<>res://scenes/drone.tscn<>res://scenes/atik.tscn
+::res://scripts/::1793478899
+atik.gd::GDScript::4165624562096854901::1793478890::0::1::::<>Node2D<><>0<>0<><>::
+deniz.gd::GDScript::3603946118870085173::1793478897::0::1::::<>Node2D<><>0<>0<><>::
+drone.gd::GDScript::8125107513655686947::1793478887::0::1::::<>CharacterBody2D<><>0<>0<><>::
+oyun.gd::GDScript::607442103507904973::1793478899::0::1::::<>Node2D<><>0<>0<><>::

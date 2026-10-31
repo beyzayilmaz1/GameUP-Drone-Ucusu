@@ -1,0 +1,3 @@
+Süzgeç Koyu — oyun döngüsü
+
+SPACE ile bir atığın üstüne gelince oyun atık değerini düşürür. Su bulanık yeşilden açılır, yazı "bulanık" veya "berrak" olur. G ile boş halkaya yosun ekilince oksijen her saniye yükselir. Oksijen artıp atık düşünce balıklar canlanır, yengeç ve kaplumbağa belirir; canlılık sayacı 3/3 olur.
